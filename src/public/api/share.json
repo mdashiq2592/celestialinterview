@@ -1,0 +1,222 @@
+{
+  "updatedDate": "2020-01-26T13:56:25.186Z",
+  "shares": [606.4, 574.4],
+  "volumes": [
+    {
+      "source": "voltor",
+      "volume": 556971,
+      "date": "2019-01-30T07:45:59.036Z"
+    },
+    {
+      "source": "powerhugs",
+      "volume": 555555,
+      "date": "2019-07-09T19:03:44.569Z"
+    },
+    {
+      "source": "eheat",
+      "volume": 234934,
+      "date": "2019-09-11T11:32:54.879Z"
+    },
+    {
+      "source": "conve",
+      "volume": 303014,
+      "date": "2020-02-16T08:29:16.206Z"
+    },
+    {
+      "source": "domind",
+      "volume": 928112,
+      "date": "2019-08-06T14:07:50.376Z"
+    },
+    {
+      "source": "voltor",
+      "volume": 129621,
+      "date": "2019-02-12T14:31:46.606Z"
+    },
+    {
+      "source": "powerhugs",
+      "volume": 386952,
+      "date": "2019-02-18T23:19:56.842Z"
+    },
+    {
+      "source": "eheat",
+      "volume": 873633,
+      "date": "2019-02-26T18:39:32.544Z"
+    },
+    {
+      "source": "conve",
+      "volume": 474988,
+      "date": "2019-02-25T02:40:44.324Z"
+    },
+    {
+      "source": "domind",
+      "volume": 910179,
+      "date": "2019-03-12T01:33:08.413Z"
+    },
+    {
+      "source": "voltor",
+      "volume": 513815,
+      "date": "2019-05-29T23:50:07.373Z"
+    },
+    {
+      "source": "powerhugs",
+      "volume": 876108,
+      "date": "2019-04-09T05:16:03.860Z"
+    },
+    {
+      "source": "eheat",
+      "volume": 160689,
+      "date": "2019-06-26T15:24:52.322Z"
+    },
+    {
+      "source": "conve",
+      "volume": 928480,
+      "date": "2019-02-05T09:48:14.771Z"
+    },
+    {
+      "source": "domind",
+      "volume": 144109,
+      "date": "2019-01-18T21:39:01.015Z"
+    },
+    {
+      "source": "voltor",
+      "volume": 361028,
+      "date": "2020-01-17T00:22:30.217Z"
+    },
+    {
+      "source": "powerhugs",
+      "volume": 785636,
+      "date": "2019-05-15T08:54:45.744Z"
+    },
+    {
+      "source": "eheat",
+      "volume": 333265,
+      "date": "2019-09-11T02:41:03.973Z"
+    },
+    {
+      "source": "conve",
+      "volume": 856864,
+      "date": "2019-03-30T08:16:18.321Z"
+    },
+    {
+      "source": "domind",
+      "volume": 795214,
+      "date": "2019-07-01T03:58:26.070Z"
+    },
+    {
+      "source": "voltor",
+      "volume": 261558,
+      "date": "2020-02-25T11:08:42.306Z"
+    },
+    {
+      "source": "powerhugs",
+      "volume": 353111,
+      "date": "2019-06-15T11:45:35.235Z"
+    },
+    {
+      "source": "eheat",
+      "volume": 733254,
+      "date": "2019-05-31T05:03:23.252Z"
+    },
+    {
+      "source": "conve",
+      "volume": 137831,
+      "date": "2019-07-10T10:11:30.478Z"
+    },
+    {
+      "source": "domind",
+      "volume": 146212,
+      "date": "2019-08-25T13:43:47.635Z"
+    },
+    {
+      "source": "domind",
+      "volume": 743264,
+      "date": "2019-06-02T13:38:32.342Z"
+    }
+  ],
+  "index": [
+    [
+      {"tags": ["OMXC99", "OMXC11", "OMXC37"], "value": 174.79327038922736},
+      {"tags": ["OMXC37", "OMXC77", "OMXC99", "OMXC11", "OMXC20", "OMXC19"], "value": 153.81341009273854},
+      {"tags": ["OMXC20", "OMXC99", "OMXC11", "OMXC19", "OMXC37"], "value": 179.28816835220601},
+      {"tags": ["OMXC77"], "value": 115.13112189778883},
+      {"tags": ["OMXC77", "OMXC11", "OMXC20", "OMXC37"], "value": 91.55851977255108},
+      {"tags": ["OMXC37", "OMXC11", "OMXC20", "OMXC19", "OMXC77", "OMXC99"], "value": 185.13637409726064},
+      {"tags": ["OMXC37", "OMXC19", "OMXC77", "OMXC99", "OMXC20"], "value": 56.19423442841932},
+      {"tags": ["OMXC77", "OMXC19", "OMXC20"], "value": 85.30117565128134},
+      {"tags": ["OMXC19"], "value": 173.5210355682433},
+      {"tags": ["OMXC11", "OMXC19", "OMXC37", "OMXC20"], "value": 192.79480308650764},
+      {"tags": ["OMXC37", "OMXC20", "OMXC11", "OMXC99", "OMXC19"], "value": 69.02279579914673},
+      {"tags": ["OMXC99", "OMXC20"], "value": 170.72126429625342},
+      {"tags": ["OMXC99", "OMXC19", "OMXC11", "OMXC37"], "value": 94.74951854802919},
+      {"tags": ["OMXC11"], "value": 114.6032451885823},
+      {"tags": ["OMXC99", "OMXC11", "OMXC77", "OMXC37"], "value": 107.39410512474964},
+      {"tags": ["OMXC20"], "value": 132.10848565406718},
+      {"tags": ["OMXC11", "OMXC77", "OMXC19", "OMXC99"], "value": 55.51030113550382},
+      {"tags": ["OMXC19", "OMXC77"], "value": 126.99688575102718},
+      {"tags": ["OMXC99", "OMXC20"], "value": 129.5638037711297},
+      {"tags": ["OMXC77"], "value": 127.08663376794644},
+      {"tags": ["OMXC20", "OMXC99", "OMXC37", "OMXC11", "OMXC77", "OMXC19"], "value": 74.58457080887754},
+      {"tags": ["OMXC11", "OMXC20", "OMXC37"], "value": 163.98364718021847},
+      {"tags": ["OMXC20", "OMXC37", "OMXC19"], "value": 107.34905745570603},
+      {"tags": ["OMXC11", "OMXC20", "OMXC19", "OMXC77"], "value": 146.60336158700125},
+      {"tags": ["OMXC77", "OMXC11", "OMXC99", "OMXC19", "OMXC20"], "value": 183.13495201283212},
+      {"tags": ["OMXC99", "OMXC20"], "value": 102.86535742710436},
+      {"tags": ["OMXC11", "OMXC37", "OMXC99", "OMXC20", "OMXC77"], "value": 125.20985775897618},
+      {"tags": ["OMXC77", "OMXC99", "OMXC37"], "value": 66.30202774875372},
+      {"tags": ["OMXC11", "OMXC37"], "value": 168.25837832411594},
+      {"tags": ["OMXC19", "OMXC99", "OMXC11"], "value": 187.24725428665522},
+      {"tags": ["OMXC99", "OMXC77", "OMXC11"], "value": 179.5981065897776},
+      {"tags": ["OMXC37", "OMXC77"], "value": 82.52302294539848},
+      {"tags": ["OMXC11"], "value": 91.2327868335997},
+      {"tags": ["OMXC99"], "value": 102.99604525007726},
+      {"tags": ["OMXC77"], "value": 152.629390313016},
+      {"tags": ["OMXC19", "OMXC20", "OMXC77", "OMXC99", "OMXC37"], "value": 112.27023532525102},
+      {"tags": ["OMXC11", "OMXC99", "OMXC77", "OMXC20", "OMXC19", "OMXC37"], "value": 136.98540841485564},
+      {"tags": ["OMXC11", "OMXC77"], "value": 163.47360833979218},
+      {"tags": ["OMXC11", "OMXC37", "OMXC77", "OMXC19"], "value": 81.86055825969096},
+      {"tags": ["OMXC37"], "value": 141.75780663171588},
+      {"tags": ["OMXC19", "OMXC11", "OMXC77"], "value": 85.62724852813423},
+      {"tags": ["OMXC99", "OMXC11", "OMXC77", "OMXC20", "OMXC19", "OMXC37"], "value": 152.52044884056636},
+      {"tags": ["OMXC37", "OMXC11"], "value": 172.8063149783986},
+      {"tags": ["OMXC99", "OMXC20", "OMXC77"], "value": 101.41914544552095}
+    ],
+    [
+      {"tags": ["OMXC20", "OMXC99", "OMXC37", "OMXC77", "OMXC19", "OMXC11"], "value": 113.40712056794546},
+      {"tags": ["OMXC77", "OMXC11", "OMXC20"], "value": 170.3250602039637},
+      {"tags": ["OMXC20", "OMXC37", "OMXC99", "OMXC11", "OMXC77", "OMXC19"], "value": 190.803880495914},
+      {"tags": ["OMXC19", "OMXC77", "OMXC99", "OMXC37", "OMXC20", "OMXC11"], "value": 158.86818716708942},
+      {"tags": ["OMXC20", "OMXC99", "OMXC77"], "value": 107.07637657039612},
+      {"tags": ["OMXC77", "OMXC19", "OMXC99", "OMXC20", "OMXC37"], "value": 191.0240847109454},
+      {"tags": ["OMXC77", "OMXC99", "OMXC11", "OMXC19", "OMXC20"], "value": 176.01198881004734},
+      {"tags": ["OMXC37"], "value": 51.97339435059768},
+      {"tags": ["OMXC99"], "value": 70.84421722242058},
+      {"tags": ["OMXC20", "OMXC37", "OMXC99", "OMXC77", "OMXC11", "OMXC19"], "value": 173.48843958989744},
+      {"tags": ["OMXC11"], "value": 182.26710488806754},
+      {"tags": ["OMXC19", "OMXC77"], "value": 103.85734522400057},
+      {"tags": ["OMXC77", "OMXC20", "OMXC37", "OMXC99"], "value": 91.13030935302842},
+      {"tags": ["OMXC19"], "value": 90.29553827876396},
+      {"tags": ["OMXC20", "OMXC77", "OMXC99", "OMXC11", "OMXC19", "OMXC37"], "value": 186.94212807640642},
+      {"tags": ["OMXC20", "OMXC77", "OMXC19"], "value": 92.05207983621732},
+      {"tags": ["OMXC11", "OMXC19"], "value": 51.69682472762671},
+      {"tags": ["OMXC37", "OMXC99", "OMXC77"], "value": 99.39760749727152},
+      {"tags": ["OMXC37", "OMXC20", "OMXC19", "OMXC11", "OMXC99", "OMXC77"], "value": 182.81817014770417},
+      {"tags": ["OMXC37", "OMXC11", "OMXC20", "OMXC99", "OMXC19", "OMXC77"], "value": 169.76012140195104},
+      {"tags": ["OMXC11", "OMXC19", "OMXC37", "OMXC77", "OMXC20"], "value": 97.94772549345464},
+      {"tags": ["OMXC11", "OMXC20", "OMXC77", "OMXC37"], "value": 96.29660763376557},
+      {"tags": ["OMXC77", "OMXC99", "OMXC37"], "value": 144.56410543094478},
+      {"tags": ["OMXC77", "OMXC20", "OMXC99"], "value": 143.24203458574124},
+      {"tags": ["OMXC99", "OMXC20", "OMXC37", "OMXC77", "OMXC11", "OMXC19"], "value": 106.59044962905242},
+      {"tags": ["OMXC77", "OMXC37", "OMXC19", "OMXC11", "OMXC20"], "value": 119.92058167673368},
+      {"tags": ["OMXC77"], "value": 180.11507273595043},
+      {"tags": ["OMXC37", "OMXC11", "OMXC77", "OMXC20", "OMXC19"], "value": 120.72255245992103},
+      {"tags": ["OMXC20", "OMXC77"], "value": 130.79499730428},
+      {"tags": ["OMXC11", "OMXC99", "OMXC19", "OMXC20", "OMXC37"], "value": 192.40659381994269},
+      {"tags": ["OMXC19", "OMXC37", "OMXC99", "OMXC11", "OMXC20"], "value": 70.23101371522372},
+      {"tags": ["OMXC37", "OMXC20", "OMXC77", "OMXC99"], "value": 59.90784154643253},
+      {"tags": ["OMXC77", "OMXC20"], "value": 89.19725650562144},
+      {"tags": ["OMXC37", "OMXC20", "OMXC77"], "value": 184.4239442149712},
+      {"tags": ["OMXC20", "OMXC37", "OMXC77", "OMXC19", "OMXC99"], "value": 126.7435215951128},
+      {"tags": ["OMXC99", "OMXC37", "OMXC20", "OMXC19", "OMXC77", "OMXC11"], "value": 108.18106054627611}
+    ]
+  ]
+}

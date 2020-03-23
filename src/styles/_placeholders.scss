@@ -1,0 +1,6 @@
+%hideArticle {
+  .article {
+    @include visually-hidden;
+    margin: 0 !important;
+  }
+}
