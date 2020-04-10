@@ -46,6 +46,8 @@
   }
 }
 
+/*Sustainability Page CSS*/
+
 .sustainability {
   .container{
     margin-top: 30px;
@@ -136,4 +138,85 @@
     }
   }
 
+}
+
+/*Shares Page CSS*/
+#share-container{
+  .stock-price{
+    color: #4099da;
+    font-weight: 600;
+  }
+
+  .stock-delta{
+    font-weight: 600;
+  }
+
+  .col-md-12{
+    flex: none;
+  }
+}
+
+
+/*Whitepaper CSS*/
+
+#whitepapers-filter-tags {
+  padding: 0!important;
+  li{
+    display: inline-block;
+    margin-right: 4px;
+    border-radius: 15px;
+    background-color: #e4e4e4;
+    padding: 5px 20px;
+    line-height: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .selected{
+    background-color: #4099da!important;
+    color: white;
+  }
+}
+
+
+/*Mobile Responsive CSS*/
+
+#whitepapers .richtext .table-mobile-head{
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  #whitepapers-filter-tags
+  {
+    li{
+      margin: 5px;
+    }
+    ul{
+      padding: 0!important;
+    }
+  }
+
+}
+
+
+/*Common CSS*/
+
+.inline-flex{
+  display: inline-flex;
+}
+.mt-70{
+  margin-top: 70px;
+}
+.mt-30{
+  margin-top: 30px;
+}
+.padding-20{
+  padding: 20px;
+}
+.text-bold{
+  font-weight: 600;
+}
+
+.text-danger{
+  color: #d9171c;
 }

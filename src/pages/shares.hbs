@@ -3,9 +3,11 @@
 
     <head>
         {{> head}}
+
     </head>
+
     {{#> body}}
-        <section class="container-fluid wide-container" style="">
+        <section id="share-container" class="container-fluid wide-container" style="">
             <div class="row row-widewidth">
                 <div class="col-12">
                     <div class="heroOverlay heroOverlay-light-blue">
@@ -70,11 +72,136 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-sm-12">
-                    <p>Please add your code here</p>
+                <div class="col-md-6 col-sm-12 padding-20">
+                    <h4>Share Price</h4>
+                    <h2 class="mt-70 stock-price">
+
+                    </h2>
+                    <p class="stock-delta"></p>
+
+                    <div class="col-md-12 inline-flex mt-30">
+                        <div class="col-md-3">Volume</div>
+                        <div class="col-md-9 volume-value"></div>
+                    </div>
+
+                    <div class="col-md-12 inline-flex mt-2">
+                        <div class="col-md-3">Last Updated</div>
+                        <div class="col-md-9 last-updated"></div>
+                    </div>
+
+                    <div class="col-md-12 inline-flex mt-2">
+                        <div class="col-md-3">OMXC20</div>
+                        <div class="col-md-9 omxc-value"> <span></span></div>
+                    </div>
                 </div>
             </div>
         </section>
+
+        <script>
+            /*Variable Declarations*/
+            var shareData = {};
+
+            /*To get the hotname from Url*/
+            var hostname = window.location.origin;
+
+            /*Retrieve JSON from the file and process the data according to the requirement*/
+            $.getJSON( hostname +"/api/share.json", function( data ) {
+                shareData = data;
+
+                /*Set Stock Price from JSON Data*/
+                $('.stock-price').html('<strong>'+shareData.shares[0].toFixed(2)+'</strong>');
+
+                /*Set Stock Delta from JSON Data based on condition*/
+                let stockDeltaDifference = shareData.shares[0] - shareData.shares[1];
+                let stockPercentageDifference = ((stockDeltaDifference/shareData.shares[1]) * 100).toFixed(2);
+                if(shareData.shares[0] > shareData.shares[1]){ /*if the difference between the share values is positive*/
+                    $('.stock-delta').html('<strong>+' + stockDeltaDifference.toFixed(2) + " DKK / +" +stockPercentageDifference+"%"+'</strong>').addClass('text-success');
+                }else if(shareData.shares[0] < shareData.shares[1]){ /*if the difference between the share values is negative*/
+                    $('.stock-delta').html('<strong>' + stockDeltaDifference.toFixed(2) + " DKK / " +stockPercentageDifference+"%"+'</strong>').addClass('text-danger');
+                }else{ /*if the difference between the share values is 0*/
+                    $('.stock-delta').html('<strong>' + stockDeltaDifference.toFixed(2) + " DKK / " +stockPercentageDifference+"%"+'</strong>');
+                }
+
+                /*Set Volume data*/
+                let volumeValue = 0;
+                let today = new Date();
+                $.each(shareData.volumes, function( index, volumeObj ) {
+                    let dateDifferenceInMonths = monthDiff(new Date(volumeObj.date), today);
+
+                    /*Volume sum of last 6 months*/
+                    if(dateDifferenceInMonths < 6){
+                        volumeValue += volumeObj.volume;
+                    }
+                });
+                $('.volume-value').html('<strong>' + volumeValue.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") +'</strong>');
+
+                /*Set Last Updated date*/
+                let formattedDate = formatDate(new Date(shareData.updatedDate));
+                $(".last-updated").text(formattedDate);
+
+                /*Set OMXC20 Data*/
+
+                /*Calculate Omxc20 sum of first set data*/
+                let omxc20Sum1 = 0;
+                $.each(shareData.index[0], function( i, tagObj ) {
+                    if(tagObj.tags.includes("OMXC20")){
+                        omxc20Sum1 += tagObj.value;
+                    }
+                });
+
+                /*Calculate Omxc20 sum of second set data*/
+                let omxc20Sum2 = 0;
+                $.each(shareData.index[1], function( i, tagObj ) {
+                    if(tagObj.tags.includes("OMXC20")){
+                        omxc20Sum2 += tagObj.value;
+                    }
+                });
+
+                let omxc20Difference = omxc20Sum2 - omxc20Sum1;
+                let omxc20PercentageDifference = ((omxc20Difference/omxc20Sum1) * 100).toFixed(2);
+
+                if(omxc20Sum2 > omxc20Sum1){ /*if the difference between the omxc20 values is positive*/
+                    $(".omxc-value").html('<strong>' +omxc20Sum1.toFixed(2) + '<span class="text-success"> +'+omxc20Difference.toFixed(2)+' / +'+omxc20PercentageDifference+'%'+'</span></strong>');
+                }else if(omxc20Sum2 < omxc20Sum1){ /*if the difference between the omxc20 values is negative*/
+                    $(".omxc-value").html('<strong>' +omxc20Sum1.toFixed(2) + '<span class="text-danger"> '+omxc20Difference.toFixed(2)+' / '+omxc20PercentageDifference+'%'+'</span></strong>');
+                }else{ /*if the difference between the omxc20 values is 0*/
+                    $(".omxc-value").html('<strong>' +omxc20Sum1.toFixed(2) + ' '+omxc20Difference.toFixed(2)+' / '+omxc20PercentageDifference+'%'+'</strong>');
+                }
+
+            });
+
+            /*This method is to get number of months from 2 dates*/
+            function monthDiff(d1, d2) {
+                var months;
+                months = (d2.getFullYear() - d1.getFullYear()) * 12;
+                months -= d1.getMonth() + 1;
+                months += d2.getMonth();
+                return months <= 0 ? 0 : months;
+            }
+
+            /*This method is to format date*/
+
+            function formatDate(inputDate){
+                var dd = inputDate.getDate();
+                var mm = inputDate.getMonth()+1;
+                var yyyy = inputDate.getFullYear();
+                var hh = inputDate.getHours();
+                var m = inputDate.getMinutes();
+
+                if(dd<10)
+                {
+                    dd='0'+dd;
+                }
+
+                if(mm<10)
+                {
+                    mm='0'+mm;
+                }
+
+                return dd+'.'+mm+'.'+yyyy+ " " +hh+':'+m;
+            }
+
+        </script>
         {{/body}}
 
 </html>

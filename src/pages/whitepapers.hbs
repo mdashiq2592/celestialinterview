@@ -15,12 +15,15 @@
                 </div>
             </div>
         </section>
-        <section class="container-fluid narrow-container">
+        <section id="whitepapers" class="container-fluid narrow-container">
             <div class="row row-narrow">
                 <div class="col-12">
-                    <p>Please edit your code here</p>
+                    <!--Filter List dynamically add here-->
+                    <ul id="whitepapers-filter-tags">
+
+                    </ul>
                     <div class="richtext">
-                        <table style="margin-top: 20px;">
+                        <table id="whitepaper-table" style="margin-top: 20px;">
                             <tbody>
                                 <tr>
                                     <td style="text-align: center;"><img src="https://via.placeholder.com/300"></td>
@@ -262,6 +265,46 @@
             </div>
         </section>
         <!--	Content	# end	-->
+
+        <script>
+
+            /*Add All tags list dynamically*/
+
+            let allTagList = [];
+            let filterTagsHtml = '<li class="selected" data-tag="all">All</li>';
+            $( "#whitepaper-table li" ).each(function(){
+                let tag = $( this ).attr( "data-tag" );
+                let value = $( this ).text();
+                if(!allTagList.includes(tag)){
+                    allTagList.push(tag);
+                    filterTagsHtml += '<li data-tag="'+tag+'">'+value+'</li>'
+                }
+            });
+
+            $( "#whitepapers-filter-tags" ).html(filterTagsHtml);
+
+            /*On Click Filter Tags*/
+            $( "#whitepapers-filter-tags" ).on("click","li[data-tag]", function() {
+                $( "#whitepapers-filter-tags li" ).removeClass('selected');
+                let selectedTag = $( this ).attr( "data-tag" );
+                $( this ).addClass( "selected" );
+                $( "#whitepaper-table tr").show();
+                if(selectedTag == 'all'){
+                    return;
+                }
+                $( "#whitepaper-table tr" ).each(function(){
+                    let currentTagsList = [];
+                    $( this ).find(".whitepapers-tags li").each(function(){
+                        currentTagsList.push($( this ).attr( "data-tag" ));
+                    });
+
+                    if(!currentTagsList.includes(selectedTag)){
+                        $(this).hide();
+                    }
+                })
+
+            });
+        </script>
         {{/body}}
 
 </html>
