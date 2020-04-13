@@ -288,7 +288,7 @@
                 $( "#whitepapers-filter-tags li" ).removeClass('selected');
                 let selectedTag = $( this ).attr( "data-tag" );
                 $( this ).addClass( "selected" );
-                $( "#whitepaper-table tr").show();
+                $( "#whitepaper-table tr").show( "slow" );
                 if(selectedTag == 'all'){
                     return;
                 }
